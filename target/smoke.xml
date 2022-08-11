@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="20" time="419.342">
+<testcase classname="User could register with valid data" name="user registers with valid data." time="19.924">
+<system-out><![CDATA[And user navigates to registration page:"https://demo.nopcommerce.com/register?returnUrl=%2F".passed
+When user press on male checkbox............................................passed
+And user enters valid first name:"Saeid"....................................passed
+And user enters valid last name:"Saleh".....................................passed
+And user select valid date of birth.........................................passed
+And user enters valid email address:"dfre112@eg.com"........................passed
+And user enters valid password:"12345678sA".................................passed
+And user confirm password:"12345678sA"......................................passed
+And user clicks on register button..........................................passed
+Then user could register successfully.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could register with valid data" name="user registers with invalid password." time="12.738">
+<system-out><![CDATA[And user navigates to registration page:"https://demo.nopcommerce.com/register?returnUrl=%2F".passed
+When user press on male checkbox............................................passed
+And user enters valid first name:"Saeid"....................................passed
+And user enters valid last name:"Saleh".....................................passed
+And user select valid date of birth.........................................passed
+And user enters valid email address:"dfre3@eg.com"..........................passed
+And user enters valid password:"123"........................................passed
+And user confirm password:"123".............................................passed
+And user clicks on register button..........................................passed
+Then user could not register successfully...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could login successfully" name="user login with valid email and password" time="14.163">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could login successfully" name="user login with invalid email and password" time="13.362">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters invalid login email........................................passed
+And user enters invalid login password......................................passed
+And user press on login button..............................................passed
+Then user could not login successfully......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could reset password" name="user write valid email to reset password" time="11.333">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/passwordrecovery".passed
+When user enters email:"dfre110@eg.com".....................................passed
+And user enters click recover button........................................passed
+And user enters click recover button........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could reset password" name="user enters invalid not registered email address." time="10.421">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/passwordrecovery".passed
+When user enters email:"dfr@gmail.com"......................................passed
+And user enters click recover button........................................passed
+Then user should not be able to reset password..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="logged user should be able to search for any product." time="16.87">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+And user uses the search text field and enters :"adidas"....................passed
+Then user clicks on the search button.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="logged user should be able to search for any product. 2" time="22.34">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+And user uses the search text field and enters :"AP_MBP_13".................passed
+Then user clicks on the search button.......................................passed
+And user choose Apple MacBook Pro 13-inch...................................passed
+And user check if returned product with the same SKU........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could switch between currencies US-Euro" name="logged user should be able to change currency from Euro to Dollars" time="25.659">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+And user search for adidas..................................................passed
+And user choose adidas Consortium Campus 80s Running Shoes..................passed
+And user press on currency list.............................................passed
+And user chooses Dollar currency............................................passed
+And user make sure the adidas price in dollar...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could switch between currencies US-Euro" name="logged user should be able to change currency from US Dollars to Euro" time="27.143">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+And user search for adidas..................................................passed
+And user choose adidas Consortium Campus 80s Running Shoes..................passed
+And user press on currency list.............................................passed
+And user chooses Euro currency..............................................passed
+And user make sure the adidas price in euro.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could select different Categories" name="Logged user will select Computers Category and then select Desktops subcategory" time="25.051">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+Given user select Computers Category........................................passed
+And user select Desktops subcategory........................................passed
+And make sure the select success1...........................................passed
+Given user choose Apparel...................................................passed
+And user choose shoes subcategory...........................................passed
+And make sure the select success2...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could filter with color" name="user could filter with color" time="21.514">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+Given user choose Apparel...................................................passed
+And user choose shoes subcategory...........................................passed
+And user filter with red color..............................................passed
+Then user make sure choosing the red shoes..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could select different tags" name="logged user select Computers&gt; Desktops &gt; awes" time="23.894">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+Given user select Computers Category........................................passed
+And user select Desktops subcategory........................................passed
+And user select awesome tag.................................................passed
+And user make sure af awesome selection.....................................passed
+And user select cool tag....................................................passed
+And user make sure af cool selection........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to Shopping cart" name="user could add shoes to shopping cart" time="27.126">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+Given user choose Apparel...................................................passed
+And user choose shoes subcategory...........................................passed
+And user add shoes to cart first step.......................................passed
+And user choose size........................................................passed
+And user add shoes to cart final step.......................................passed
+And user make sure to add product to cart...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to Shopping cart" name="user could add digital storm to shopping cart" time="21.556">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+Given user select Computers Category........................................passed
+And user select Desktops subcategory........................................passed
+And user add digital storm to cart..........................................passed
+And user make sure to add product to cart...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to Wishlist" name="user could add shoes to wishlist" time="14.359">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/"............passed
+Given user choose Electronics...............................................passed
+And user choose cell camera & photos subcategory............................passed
+And user add camera to wishlist.............................................passed
+And user make sure to add product to wishlist...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to Wishlist" name="user add digital storm to wishlist" time="15.55">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/"............passed
+Given user select Computers Category........................................passed
+And user select Desktops subcategory........................................passed
+And user add digital storm to wishlist......................................passed
+And user make sure to add product to wishlist...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to compare list" name="user could add shoes to Compare list" time="28.318">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+Given user choose Apparel...................................................passed
+And user choose shoes subcategory...........................................passed
+And user choose red shoes...................................................passed
+And user choose size........................................................passed
+And user add shoes to Compare list..........................................passed
+And user make sure to add product to Compare list...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to compare list" name="user add digital storm to Compare list" time="21.245">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+Given user select Computers Category........................................passed
+And user select Desktops subcategory........................................passed
+And user add digital storm to Compare list..................................passed
+And user make sure to add product to Compare list...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could Create successful Order" name="user make successful order" time="45.693">
+<system-out><![CDATA[And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F".passed
+When user enters  login email...............................................passed
+And user enters login password..............................................passed
+And user press on login button..............................................passed
+Given user select Computers Category........................................passed
+And user select Desktops subcategory........................................passed
+And user add digital storm to cart..........................................passed
+And user click on shopping cart.............................................passed
+And user agree on terms and conditions......................................passed
+And user enter shopping data................................................passed
+And user press continue 3 times one by one..................................passed
+And user confirm order......................................................passed
+And user make sure of making order..........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
