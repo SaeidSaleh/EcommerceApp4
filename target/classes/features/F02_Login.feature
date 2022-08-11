@@ -10,7 +10,7 @@ Feature: User could login successfully
        When user enters  login email
        And user enters login password
        And user press on login button
-      # Then user could login successfully.
+       Then user could login successfully.
 
     # Test Scenario 2"
      Scenario: user login with invalid email and password

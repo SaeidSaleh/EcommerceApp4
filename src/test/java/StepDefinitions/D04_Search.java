@@ -7,8 +7,8 @@ import org.testng.Assert;
 
 public class D04_Search {
     P04_Search search = new P04_Search();
-    @And("^user uses the search text field and enters :\"(.*)\"$")
-    public void search_area(String productName){search.search_area().sendKeys(productName);}
+    @And("user uses the search text field and enters adidas")
+    public void search_area1(){search.search_area1().sendKeys("adidas");}
     @Then("user clicks on the search button")
     public void search_button() throws InterruptedException {
         search.search_button().click();
@@ -20,6 +20,10 @@ public class D04_Search {
         String expectedURL = "https://demo.nopcommerce.com/search?q=adidas";
         Assert.assertTrue(actualURL.contains(expectedURL));
     }
+
+    @And("user uses the search text field and enters Apple Mac Pro")
+    public void search_area2(){search.search_area2().sendKeys("AP_MBP_13");}
+
     @And("user choose Apple MacBook Pro 13-inch")
     public void choose_apple_macbook() throws InterruptedException {
         search.choose_Apple_mac_pro().click();

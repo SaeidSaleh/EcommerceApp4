@@ -10,7 +10,7 @@ Feature: User could reset password
     When user enters email:"dfre110@eg.com"
     And user enters click recover button
     And user enters click recover button
-    #Then user could reset password successfully
+    Then user could reset password successfully
 
 
   # Test Scenario 3"
