@@ -7,7 +7,7 @@ Feature: User could reset password
 
   # Test Scenario 3
   Scenario: user write valid email to reset password
-    When user enters email:"dfre110@eg.com"
+    When user enters email:"dfre301@eg.com"
     And user enters click recover button
     And user enters click recover button
     Then user could reset password successfully

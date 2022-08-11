@@ -16,4 +16,4 @@ Feature:Logged user could Create successful Order
     And user enter shopping data
     And user press continue 3 times one by one
     And user confirm order
-    And user make sure of making order
+    #And user make sure of making order

@@ -3,9 +3,9 @@
 Feature:Logged user could add different products to Shopping cart
   Background: user opens chrome browser.
     And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F"
-    When user enters  login email
-    And user enters login password
-    And user press on login button
+    #When user enters  login email
+    #And user enters login password
+    #And user press on login button
 
     #Test Scenario 9 #adding shoes
   Scenario: user could add shoes to shopping cart

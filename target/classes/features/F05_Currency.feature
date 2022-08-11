@@ -4,9 +4,9 @@ Feature: Logged User could switch between currencies US-Euro
 
   Background: user opens chrome browser.
     And user navigates to login page:"https://demo.nopcommerce.com/login?returnUrl=%2F"
-    When user enters  login email
-    And user enters login password
-    And user press on login button
+    #When user enters  login email
+    #And user enters login password
+    #And user press on login button
 
     # Test Scenario 5
   Scenario: logged user should be able to change currency from Euro to Dollars

@@ -11,7 +11,7 @@ Feature: User could register with valid data
     And user enters valid first name:"Saeid"
     And user enters valid last name:"Saleh"
     And user select valid date of birth.
-    And user enters valid email address:"dfre112@eg.com"
+    And user enters valid email address:"dfre302@eg.com"
     And user enters valid password:"12345678sA"
     And user confirm password:"12345678sA"
     And user clicks on register button.

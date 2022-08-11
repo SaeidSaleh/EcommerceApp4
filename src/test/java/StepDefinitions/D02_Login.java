@@ -19,7 +19,7 @@ public class D02_Login {
         Thread.sleep(2000);}
 
     @When("user enters  login email")
-    public void enter_email(){login.loginEmail().sendKeys("dfre112@eg.com");}
+    public void enter_email(){login.loginEmail().sendKeys("dfre300@eg.com");}
     @And("user enters login password")
     public void enter_password() throws InterruptedException {
         login.loginpassword().sendKeys("12345678sA");
